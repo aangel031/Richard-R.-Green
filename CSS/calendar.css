@@ -1,0 +1,15 @@
+.txtTitle{
+    color: #7f8c8d;
+}
+table > thead > tr > th{
+    text-align: center;
+    font-size: 20px;
+}
+.eventDate, .eventTitle{
+    text-align: center;
+    font-size: 20px;
+}
+.eventDesc{
+    font-size: 20px;
+    padding: 5px;
+}

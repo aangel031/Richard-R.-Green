@@ -1,0 +1,12 @@
+.announcementTemplate{
+    box-shadow: 0px 2px 3px dimgray;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+.announcement{
+    box-shadow: 0px 2px 3px dimgray;
+    padding: 15px;
+    border-radius: 5px;
+    height: 200px !important;
+}

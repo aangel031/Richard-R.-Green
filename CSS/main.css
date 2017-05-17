@@ -1,0 +1,230 @@
+#header{
+  background-color: #1E824C;
+  padding: 15px 0px 15px 0px;
+  width: 100%;
+  color: white;
+  box-shadow: 0px 2px 4px black;
+  z-index: 2;
+  position: fixed;
+}
+h2{
+  margin: 0px;
+  font-family: sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+#menuHolder{
+  width: 50px;
+}
+#header > div > h2{
+  margin: 0px;
+  text-align: left;
+}
+#txtSearch{
+  /*width: 100%;*/
+  font-family: sans-serif;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 3px;
+  font-size: 20px;
+  color: gray;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right: 0px;
+}
+.searchField{
+  display: inline;
+}
+#btnSearch{
+  font-size: 20px;
+   padding: 0px;
+   background: #3498db;
+   border: 0px;
+   border-top-right-radius: 3px;
+   border-bottom-right-radius: 3px;
+   border: 1px solid #3498db;
+   padding: 1px;
+
+}
+#btn_menu{
+  height: 30px;
+  width: 35px;
+}
+#btn_menu:hover{
+  cursor: pointer;
+}
+#schoolImg{
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 550px;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+#slogan{
+  margin: 0px;
+  font-size: 45px !important;
+  text-shadow: 0px 1px 2px black;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  padding-top: 80px;
+}
+#infoSection{
+  height: 100%;
+  width: 100%;
+  background: white;
+  margin-top: 10%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  box-shadow: 0px -2px 5px black;
+  padding-top: 25px !important;
+  padding-bottom: 30px !important;
+  /*z-index: 1;*/
+  /*position: absolute;*/
+}
+#instFocus{
+  font-family: sans-serif;
+  color: #1E824C;
+}
+.card{
+  border-radius: 15px;
+  box-shadow: 0px 1.5px 3px dimgray;
+  padding-bottom: 5px;
+  padding: 15px;
+  padding-top: 0px;
+  margin-bottom: 15px;
+  /*margin-top: 55px;*/
+}
+.cardTitle{
+  color: #7f8c8d;
+  text-align: center;
+  padding-top: 10px;
+}
+.cardTitle > a:hover{
+  color: #1E824C !important;
+  text-decoration: none !important;
+}
+.cardTitle > a:link > a:visited{
+  color: #7f8c8d !important;
+  text-decoration: none;
+}
+.announcementImg{
+  height: 100px;
+  width: 150px;
+}
+.announcementContent{
+  font-weight: 300;
+}
+.divisor{
+  background: white;
+  height: 3px; 
+  width: 80%; 
+  margin: 0 auto; 
+  border: 1px solid white;
+  border-radius: 5px !important; 
+  box-shadow: 0px 1px 3px black;
+}
+.divisor-green{
+  background-color:#1E824C; 
+  height: 2px; 
+  width: 80%;
+  margin: 0 auto;
+}
+#instFocusText{
+  font-weight: 300; 
+  text-align: center;
+}
+.divisor-gray{
+  background-color:#7f8c8d;
+  height: 1.5px; 
+  width: 100%; 
+  margin: 0 auto; 
+  margin-bottom: 15px;
+}
+.divisor-gray-tall{
+  background-color:#7f8c8d;
+  height: 2px; 
+  width: 100%; 
+  margin: 0 auto; 
+  margin-bottom: 15px;
+}
+#slogan > h1{
+  font-size: 40px;
+}
+#instFocus > h2{
+  margin-bottom: 5px;
+}
+#mainBody{
+  left: 0px;
+  position: absolute;
+}
+#menuBar{
+  height:100vh;
+  background: white;
+  color: black;
+  left: -305px;
+  position: absolute;
+  width: 250px;
+  margin-top: 65px;
+  /*padding-left: 40px;*/
+}
+.menuSelection{
+  color: #7f8c8d;
+  padding-left: 20px;
+}
+#menuBar > .divisor-gray{
+  margin-bottom: 0px;
+}
+
+.menuSelection:hover{
+  cursor: pointer;
+  color: #1E824C;
+}
+#txtTitle{
+  text-align: center;
+  padding-right: 0px;
+  padding-left: 15px;
+  font-weight: 300 !important;
+}
+#subpages {
+  padding-left: 30px;
+  height: 0px;
+  opacity: 0;
+  display: none;
+}
+#subpages > .divisor-gray{
+  height: 1px;
+}
+.menuSelection > a:link, a:visited{
+  color: #7f8c8d !important;
+  text-decoration: none;
+}
+.menuSelection > a:hover{
+  color: #1E824C !important;
+}
+#announcementTemplate{
+  display: none;
+}
+.announcementTitle, .announcementDate{
+  font-family: sans-serif;
+  font-weight: 500;
+}
+.announcementDate{
+  text-align: right;
+}
+.announcement {
+  margin-bottom: 15px;
+}
+#eventsTable > thead > tr > th{
+    text-align: center;
+    font-size: 15px;
+}
+.eventDate, .eventTitle{
+    text-align: center;
+    font-size: 15px;
+}
+.eventDesc{
+    font-size: 15px;
+    padding: 5px;
+}

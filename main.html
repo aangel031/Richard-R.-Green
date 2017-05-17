@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Richard R. Green High School of Teaching</title>
+
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!--Bootstrap-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--Style-->
+    <link rel="stylesheet" type="text/css" href="CSS/main.css"/>
+  
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+    <script type="text/javascript">
+       var config = {
+          apiKey: "AIzaSyACxgQ49HYEyZ78BqtzaD0Jnbh0jPp9c80",
+          authDomain: "rrg-db.firebaseapp.com",
+          databaseURL: "https://rrg-db.firebaseio.com",
+          projectId: "rrg-db",
+          storageBucket: "rrg-db.appspot.com",
+          messagingSenderId: "239630721959"
+        };
+    </script>
+    <!--Main JS-->
+    <script src="JS/main.js"></script>
+    
+    <!--Font Awesome -->
+    <script src="https://use.fontawesome.com/69fae176c5.js"></script>
+    
+    <!--Menu Bar Script-->
+    <script type="text/javascript" src="JS/menu_bar.js"></script>
+  </head>
+  <body>
+    <header id="header" class="container">
+      <div class="col-sm-1 col-md-1" id="menuHolder">
+        <img src="Images/menu_button.png" id="btn_menu" class="unclicked"/>
+      </div>
+      <h2 class="col-sm-11 col-md-11" id="txtTitle">Richard R. Green High School of Teaching</h2>
+    </header>
+    
+     <!--Menu Bar-->
+      <div id="menuBar">
+        <h3 class="menuSelection"><a href="announcements.html">Announcements</a></h3>
+        <div class="divisor-gray-tall"></div>
+        
+        <h3 class="menuSelection"><a href="calendar.html">Calendar</a></h3>
+        <div class="divisor-gray-tall"></div>
+      </div>
+    <!--Menu Bar-->
+
+   
+
+    <div id="mainBody" class="mainBody">
+      <!---Intro Section -->
+      <div style="width: 100%;">
+        <img id="schoolImg" src="Images/Richard_R_Green(Edited).jpg"/>
+        <div id="slogan">
+          <h1>"Where Learners are Teachers and Teachers are Learners"</h1>
+          <div class="divisor"></div>
+          <h3>7 Beaver Street @ Beaver Street and Broadway New York, New York 10004 </h3>
+          <h3>Phone: (646) 826 8174 </h3>
+          <h3>Fax: (646) 826 8175 </h3>
+          <h3>Principal: Nigel Pugh</h3>
+        </div>
+      </div>
+      <!---Intro Section -->
+
+      <!--Main Body -->
+      <div id="infoSection" class="container">
+        <div class="col-md-12">
+        <div id="instFocus">
+          <h2>Our Instructional Focus</h2>
+          <div class="divisor-green"></div>
+          <h3 id="instFocusText">"Students will collaboratively and extensively engage with the writing process in class to compose writing that is authentic and considers student voice, choice and relevancy. Students will use the ongoing tools of low stakes writing and revision and eventually will edit and publish selections of their written work for an audience."</h3>
+        </div>
+        
+        <div class="container col-md-12 col-sm-12 col-lg-12">
+          <div class="contaier col-sm-12 col-md-6 col-lg-6"> 
+            <div class="card">
+              <h3 class="cardTitle"><a href="announcements.html">Announcements</a></h3>
+              <div class="divisor-gray"></div>
+              <div id="announcementsHolder">
+                
+              </div>
+              <h4 class="cardTitle" style="font-size: 20px;"><a href="announcements.html">View More</a></h4>
+              <!--Announcement Template-->
+              <div id="announcementTemplateHolder" class="col-sm-12 col-md-6 col-xl-4">
+                  <div id="announcementTemplate" class="col-sm-12 col-md-6 col-xl-4">
+                  <h4 class="announcementTitle col-sm-8 col-md-9"></h4>
+                  <h4 class="announcementDate col-sm-2 col-md-2"></h4>
+                  <div class="clearfix"></div>
+                  <h4 class="announcementContent col-md-12"></h4>
+                  <div class="clearfix"></div>
+                <div class="divisor-gray col-md-12"></div>
+              </div>
+              <!--Announcement Template-->
+            </div>
+            </div>
+          </div>
+          
+          <div class="contaier col-sm-12 col-md-6 col-lg-6">
+            <div class="card" style="position: static">
+              <h3 class="cardTitle"><a href="calendar.html">Calendar</a></h3>
+              <div class="divisor-gray"></div>
+              
+              <div class="agenda">
+                <div class="table-responsive">
+                      <table class="table table-condensed table-bordered" id="eventsTable">
+                          <thead>
+                              <tr>
+                                  <th class="col-md-2">Date</th>
+                                  <th class="col-md-2">Name</th>
+                                  <th class="col-md-8">Event</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                             
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="contaier col-sm-12 col-md-6 col-lg-6"> 
+            <div class="card" >
+              <h3 class="cardTitle">Good Links</h3>
+              <div class="divisor-gray"></div>
+              <ul>
+                <li><h4><a href="http://caranyc.org/" target="_blank">CARA New York</a></h4></li>
+                <li><h4><a href="http://www.mpcfaculty.net/CL/default.htm" target="_blank">Career</a></h4></li>
+                <li><h4><a href="https://fafsa.ed.gov/" target="_blank">FAFSA</a></h4> </li>
+                <li><h4><a href="https://studentaid.ed.gov/sa/" target="_blank">Federal Student Aid Page</a></h4> </li>
+                <li><h4><a href="http://ww.bls.gov/" target="_blank">Bureau of Labor Statistics</a></h4></li>
+                <li><h4><a href="http://collegefes.org/" target="_blank">CFES (College For Every Student)</a></h4></li>
+                <li><h4><a href="http://getmetocollege.org/" target="_blank">Get Me To College</a></h4></li>
+                <li><h4><a href="http://www.collegegreenlight.com/blog/2014-college-fly-in-programs/" target="_blank">Diversity Fly In</a></h4></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Main Body -->
+    </div>
+  </body>
+</html>

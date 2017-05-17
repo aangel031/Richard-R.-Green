@@ -1,0 +1,84 @@
+#txtTitle > strong{
+    font-weight: 400;
+    font-style: italic;
+}
+#uploadBody{
+    position: absolute;
+    margin-top: 80px;
+}
+#announcementsTxt{
+    width: 100% !important;
+    text-align: center !important;
+    color: #7f8c8d;
+}
+#uploadBody > .divisor-gray{
+    margin-top: 5px;
+}
+#menuBar{
+    box-shadow: 0px 1px 5px #7f8c8d;
+}
+#announcementHolder > input, #eventHolder > input{
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+#announcementHolder input:focus, #eventHolder input:focus{
+    text-align: left;
+    vertical-align: top !important;
+}
+#announcementContent, #eventDescription{
+    font-size: 20px;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    
+    max-width: 100%;
+    
+    border: 0px;
+    box-shadow: 0px 0px 2.5px inset;
+}
+#btnSubmit, #btnEventSubmit{
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+    
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    
+    background: #1E824C;
+}
+#announcementTitle, #eventTitle{
+    border-radius: 5px;
+    border: 0px;
+    box-shadow: 0px 0px 2.5px inset;
+}
+#announcementDate, #eventDate{
+    font-size: 25px;
+    height: 37px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+#announcementDate:focus{
+    text-align: left;
+    vertical-align: top !important;
+}
+#loadingDoneContainer{
+    font-size: 100px;
+    text-align: center;
+    color: #7f8c8d;
+}
+#loadingDoneContainer > .fa-spinner, .fa-check-circle-o{
+    opacity: 0;
+}
+.btnReSubmit{
+    background: #7f8c8d;
+    font-size: 20px;
+    font-weight: 300;
+    display: none;
+}
+#calendarUploadHolder{
+    opacity: 0;
+    display: none;
+}
