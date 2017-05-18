@@ -1,12 +1,12 @@
 ## Richard R. Green High School of Teaching Website
 
+## Purpose of this Project
+This project part of a personal challenge to redesign my school website completly as it needed to be updated.
+
 ## Preview (Main Page, Announcements Page, Calendar Page)
 ![ALT TEXT](Preview/preview_main.gif)
 
 ## Preview (Staff Page)
-
-## Purpose of this Project
-This project part of a personal challenge to redesign my school website completly as it needed to be updated.
 
 ## Features
  * This project allows teachers to upload announcements and events to a database in this case Firebase
