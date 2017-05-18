@@ -1,7 +1,7 @@
 ## Richard R. Green High School of Teaching Website
 
 ## Preview (Main Page, Announcements Page, Calendar Page)
-![ALT TEXT](Preview/Preview_Main.gif)
+![ALT TEXT](Preview/preview_main.gif)
 
 ## Preview (Staff Page)
 
