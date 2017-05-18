@@ -4,10 +4,10 @@
 This project part of a personal challenge to redesign my school website completly as it needed to be updated.
 
 ## Preview (Main Page, Announcements Page, Calendar Page)
-![ALT TEXT](Preview/preview_main.gif)
+![ALT TEXT](Preview/preview_main.gif = 600x338)
 
 ## Preview (Staff Page)
-![ALT TEXT](Preview/preview_staff.gif)
+![ALT TEXT](Preview/preview_staff.gif = 600x338)
 
 ## Features
  * Main:
