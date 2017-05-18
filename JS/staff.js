@@ -6,6 +6,19 @@ $(document).ready(function (){
         
         $("#announcementUploadHolder").css("display", "block");
         $("#announcementUploadHolder").animate({opacity: 1});
+        
+        //Animates Menu 
+        $('#menuBar').animate({
+                left: '-=' + 305  
+            }, 500);
+            
+            $('.mainBody').animate({
+                left: '-=' + 250  
+            }, 500);
+        $("#btn_menu").removeClass('clicked');
+        $("#btn_menu").addClass('unclicked');
+        
+        $("#btn_menu").attr('src', 'Images/menu_button.png');
     });
     $("#menuUploadEvent").click(function(){
         $("#announcementUploadHolder").animate({opacity: 0});
@@ -13,5 +26,17 @@ $(document).ready(function (){
         
         $("#calendarUploadHolder").css("display", "block");
         $("#calendarUploadHolder").animate({opacity: 1});
+        
+        $('#menuBar').animate({
+                left: '-=' + 305  
+            }, 500);
+            
+            $('.mainBody').animate({
+                left: '-=' + 250  
+            }, 500);
+        $("#btn_menu").removeClass('clicked');
+        $("#btn_menu").addClass('unclicked');
+        
+        $("#btn_menu").attr('src', 'Images/menu_button.png');
     })
 })
