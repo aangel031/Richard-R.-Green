@@ -17,6 +17,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!--Style-->
+    <style>
+      /*
+      Google Font (Product Sans)
+      */
+      @font-face {
+        font-family: 'Product Sans';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+      }
+    </style>
     <link rel="stylesheet" type="text/css" href="CSS/main.css"/>
     <!--Staff Page CSS-->
     <link rel="stylesheet" type="text/css" href="CSS/staff.css"/>
@@ -38,12 +49,14 @@
           storageBucket: "rrg-db.appspot.com",
           messagingSenderId: "239630721959"
       };
+      
+       var rrgDB = firebase.initializeApp(config);
     </script>
     <script type="text/javascript" src="JS/firebase.js"></script>
 		<script type="text/javascript" src="JS/staff.js"></script>
-		
 		<!--Menu Bar Script-->
     <script type="text/javascript" src="JS/menu_bar.js"></script>
+    <script type="text/javascript" src="JS/login.js"></script>
   </head>
   <body>
     <header id="header" class="container">
@@ -63,6 +76,18 @@
     <!--Menu Bar-->
     </div>
     
+    <div id="loginPadding">
+      <div id="loginHolder" class="col-md-2">
+        <h3>Sign In</h3>
+        <div>
+          <input type="text" name="username" placeholder="Username" id="txtUsrname" class="col-md-12"/>
+          <input type="password" name="txtPass" placeholder="Password" id="txtPass" class="col-md-12"/>
+          <button class="col-md-12" id="btnLogin">Login</button>
+        </div>
+      </div>
+      <div id="#l"></div>
+      <div id="#r"></div>
+    </div>
     <!--Main Body-->
         <div id="uploadBody" class="col-md-12 mainBody">
           <div id="announcementUploadHolder">
@@ -70,15 +95,15 @@
             <div class="divisor-gray"></div>
             
             <div id="announcementHolder">
-              <input placeholder="Title" class="col-md-10" id="announcementTitle"/>
+              <input placeholder="Title" class="col-md-10 " id="announcementTitle" disabled="true"/>
               <!--<input type="text" name="date" placeholder="Date" class="col-md-2" id="announcementsDate"/>-->
               <!--<input date-provide="datepicker" placeholder="Date" class="col-md-2" id="announcementDate"/>-->
               <div id="datepickerContainer" class="col-md-2">
-                  <input type="text" class="form-control" id="announcementDate" placeholder="Date">
+                  <input type="text" class="form-control" id="announcementDate" placeholder="Date" disabled="true">
               </div>
               
-              <textarea type="textarea" name="content" placeholder="Content" id="announcementContent" class="col-md-12 form-control"/></textarea>
-              <button type="button" class="btn btn-primary col-md-12" id="btnSubmit">Submit</button>
+              <textarea type="textarea" name="content" placeholder="Content" id="announcementContent" class="col-md-12 form-control" disabled="true"/></textarea>
+              <button type="button" class="btn btn-primary col-md-12 u" id="btnSubmit" disabled="true">Submit</button>
             </div>
           </div>  
           
@@ -87,12 +112,12 @@
             <div class="divisor-gray"></div>
             
             <div id="eventHolder">
-              <input placeholder="Event Name" class="col-md-10" id="eventTitle"/>
+              <input placeholder="Event Name" class="col-md-10" id="eventTitle" disabled="true"/>
               <div id="datepickerContainer" class="col-md-2">
-                  <input type="text" class="form-control" id="eventDate" placeholder="Date">
+                  <input type="text" class="form-control" id="eventDate" placeholder="Date" disabled="true">
               </div>
-              <textarea type="textarea" name="content" placeholder="Event Description" id="eventDescription" class="col-md-12 form-control"/></textarea>
-              <button type="button" class="btn btn-primary col-md-12" id="btnEventSubmit">Submit</button>
+              <textarea type="textarea" name="content" placeholder="Event Description" id="eventDescription" class="col-md-12 form-control" disabled="true"/></textarea>
+              <button type="button" class="btn btn-primary col-md-12 u" id="btnEventSubmit">Submit</button>
             </div>
           </div>  
           <div id="loadingDoneContainer">

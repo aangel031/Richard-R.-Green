@@ -11,7 +11,7 @@ $(document).ready(function (){
     //     messagingSenderId: "239630721959"
     // };
    
-    var rrgDB = firebase.initializeApp(config);
+   
    
    //Uploads announcement data to database
     function uploadAnnouncement(title, announcement, date){
@@ -71,57 +71,63 @@ $(document).ready(function (){
     
     //Handles the data upload by organizing the data and avoiding blank data
     $("#btnSubmit").click(function (){
-        var newAnnouncementTitle = $("#announcementTitle").val();
+        //Checks to see if user has logged in
+        if($("#btnSubmit").hasClass('u') != true){
+            alert("Logged In");
+            var newAnnouncementTitle = $("#announcementTitle").val();
         
-        //replaces "/"" with "," to avoid creating folder in Firebase Database
-        var newAnnouncementDate =  $("#announcementDate").val().replace("/", ",").replace("/", ",");
-        var newAnnouncementContent = $("#announcementContent").val();
-        
-        //Checks to see if the inputs aren't empty
-        if(newAnnouncementTitle != "" && newAnnouncementDate != "" && newAnnouncementContent !=""){
-            $("#announcementHolder").animate({
-            opacity: 0
-            }, 500);
+            //replaces "/"" with "," to avoid creating folder in Firebase Database
+            var newAnnouncementDate =  $("#announcementDate").val().replace("/", ",").replace("/", ",");
+            var newAnnouncementContent = $("#announcementContent").val();
             
-            $("#announcementHolder").css('display', 'none');
+            //Checks to see if the inputs aren't empty
+            if(newAnnouncementTitle != "" && newAnnouncementDate != "" && newAnnouncementContent !=""){
+                $("#announcementHolder").animate({
+                opacity: 0
+                }, 500);
+                
+                $("#announcementHolder").css('display', 'none');
+                
+                $(".fa-spinner").animate({
+                    opacity: 1
+                }, 500);
+                
+                uploadAnnouncement(newAnnouncementTitle, newAnnouncementContent, newAnnouncementDate);
+                
+            } else if(newAnnouncementTitle == "" && newAnnouncementContent == "" ){
+                $("#announcementTitle").css('color', 'red');
+                $("#announcementContent").css('color', 'red');
+                
+                $('#announcementTitle').bind('input propertychange', function() {
+                  $("#announcementTitle").css('color', '');
+                });
+                
+                $('#announcementContent').bind('input propertychange', function() {
+                  $("#announcementContent").css('color', '');
+                });
+                
+            } else if(newAnnouncementTitle == ""){
+                $("#announcementTitle").css('color', 'red');
+                
+                $('#announcementTitle').bind('input propertychange', function() {
+                  $("#announcementTitle").css('color', '');
+                });
+                
+            } else if(newAnnouncementContent == ""){
+                $("#announcementContent").css('color', 'red');
+                
+                $('#announcementContent').bind('input propertychange', function() {
+                  $("#announcementContent").css('color', '');
+                });
+            }
             
-            $(".fa-spinner").animate({
-                opacity: 1
-            }, 500);
-            
-            uploadAnnouncement(newAnnouncementTitle, newAnnouncementContent, newAnnouncementDate);
-            
-        } else if(newAnnouncementTitle == "" && newAnnouncementContent == "" ){
-            $("#announcementTitle").css('color', 'red');
-            $("#announcementContent").css('color', 'red');
-            
-            $('#announcementTitle').bind('input propertychange', function() {
-               $("#announcementTitle").css('color', '');
-            });
-            
-            $('#announcementContent').bind('input propertychange', function() {
-               $("#announcementContent").css('color', '');
-            });
-            
-        } else if(newAnnouncementTitle == ""){
-            $("#announcementTitle").css('color', 'red');
-            
-            $('#announcementTitle').bind('input propertychange', function() {
-               $("#announcementTitle").css('color', '');
-            });
-            
-        } else if(newAnnouncementContent == ""){
-            $("#announcementContent").css('color', 'red');
-            
-            $('#announcementContent').bind('input propertychange', function() {
-               $("#announcementContent").css('color', '');
-            });
-        }
-        
-        if(newAnnouncementDate == ""){
-            $("#announcementDate").animate({
-                boxShadow: '0px 0px 2.5px rgb(255, 35, 50)'
-            }, 100)
+            if(newAnnouncementDate == ""){
+                $("#announcementDate").animate({
+                    boxShadow: '0px 0px 2.5px rgb(255, 35, 50)'
+                }, 100)
+            }
+        } else{
+            alert("Login");
         }
     })
     
